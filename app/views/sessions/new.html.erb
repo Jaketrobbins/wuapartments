@@ -1,19 +1,66 @@
 <% provide(:title, "Sign in") %>
-<h1>Sign in</h1>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+<div id="sign_up2">
+        <div class="container">
+            <div class="section_header">
+                <h3>Sign up <span>(option 2)</span></h3>
+            </div>
+            <div class="row login">
+                <div class="col-sm-5 left_box">
+                    <h4>Create your account</h4>
 
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-    <% end %>
+                    <div class="perk_box">
+                        <div class="perk">
+                            <span class="icos ico1"></span>
+                            <p><strong>Lorem alteration</strong> in some form  injected humour these randomised words .</p>
+                        </div>
+                        <div class="perk">
+                            <span class="icos ico2"></span>
+                            <p><strong>There are many variations</strong> of passages of Lorem alteration in some form  injected humour these randomised words.</p>
+                        </div>
+                        <div class="perk">
+                            <span class="icos ico3"></span>
+                            <p><strong>Alteration in some form</strong> injected humour these randomised words.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-  </div>
-</div>
+                <div class="col-sm-6 signin_box">
+                    <div class="box">
+                        <div class="box_cont">
+                            <div class="social">
+                                <a href="#" class="circle facebook">
+                                   <%= image_tag "img/face.png" %>
+                                </a>
+                                 <a href="#" class="circle twitter">
+                                    <%= image_tag "img/twt.png" %>">
+                                </a>
+                                 <a href="#" class="circle gplus">
+                                    <%= image_tag "img/gplus.png" %>">
+                                </a>
+                            </div>
+
+                            <div class="division">
+                                <div class="line l"></div>
+                                <span>or</span>
+                                <div class="line r"></div>
+                            </div>                                
+                                <%= form_for(:session, url: sessions_path) do |f| %>
+
+                                  <%= f.label :email %>
+                                  <%= f.text_field :email %>
+
+                                  <%= f.label :password %>
+                                  <%= f.password_field :password %>
+
+                                  <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+                                <% end %>      
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
