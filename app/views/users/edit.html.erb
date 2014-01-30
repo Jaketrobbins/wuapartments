@@ -1,27 +1,69 @@
-<% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages' %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+<% provide(:title, 'Edit User') %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+ 
+    
+    <!-- Sign In Option 2 -->
+    <div id="sign_up2">
+        <div class="container">
+            <div class="section_header">
+                <h3>Edit User <span>(option 2)</span></h3>
+            </div>
+            <div class="row login">
+                <div class="col-sm-5 left_box">
+                    <h4>Create your account</h4>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+                    <div class="perk_box">
+                        <div class="perk">
+                            <span class="icos ico1"></span>
+                            <p><strong>Lorem alteration</strong> in some form  injected humour these randomised words .</p>
+                        </div>
+                        <div class="perk">
+                            <span class="icos ico2"></span>
+                            <p><strong>There are many variations</strong> of passages of Lorem alteration in some form  injected humour these randomised words.</p>
+                        </div>
+                        <div class="perk">
+                            <span class="icos ico3"></span>
+                            <p><strong>Alteration in some form</strong> injected humour these randomised words.</p>
+                        </div>
+                    </div>
+                </div>
 
-      <%= f.label :password_confirmation, "Confirm Password" %>
-      <%= f.password_field :password_confirmation %>
+                <div class="col-sm-6 signin_box">
+                    <div class="box">
+                        <div class="box_cont">
+                            
+                         
+                            <%= gravatar_for @user %>
+                                  <a href="http://gravatar.com/emails">change</a>
+                            <div class="division">
+                                <div class="line l"></div>
+                                <span>Info</span>
+                                <div class="line r"></div>
+                            </div>                                
+                                   <%= form_for(@user) do |f| %>
+                                    <%= render 'shared/error_messages' %>
 
-      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
-    <% end %>
+                                    <%= f.label :name %>
+                                    <%= f.text_field :name %>
 
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails">change</a>
-  </div>
-</div>
+                                    <%= f.label :email %>
+                                    <%= f.text_field :email %>
+
+                                    <%= f.label :password %>
+                                    <%= f.password_field :password %>
+
+                                    <%= f.label :password_confirmation, "Confirm Password" %>
+                                    <%= f.password_field :password_confirmation %>
+
+                                    <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+                                  <% end %>
+
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
