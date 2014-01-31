@@ -1,0 +1,26 @@
+<li>
+  <span class="content"><%= micropost.content %></span>
+  <span class"houseprice"><%= micropost.houseprice %> </span>
+  <span class"psqft"><%= micropost.psqft %> </span>
+  <span class"ptitle"><%= micropost.ptitle %> </span>
+  <span class"pbed"><%= micropost.pbed %> </span>
+  <span class"pbath"><%= micropost.pbath %> </span>
+  <span class"pzip"><%= micropost.pzip %> </span>
+  <span class"paddress"><%= micropost.paddress %> </span>
+  <span class"pcity"><%= micropost.pcity %> </span>
+  <span class"pstate"><%= micropost.pstate %> </span>
+  <span class"pfurnish"><%= micropost.pfurnish %> </span>
+  <span class"pcats"><%= micropost.pcats %> </span>
+  <span class"pdogs"><%= micropost.pdogs %> </span>
+  <span class"psmoke"><%= micropost.psmoke %> </span>
+  <span class"plaundry"><%= micropost.plaundry %> </span>
+  <span class"pparking"><%= micropost.pparking %> </span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  </span>
+  <% if current_user?(micropost.user) %>
+    <%= link_to "delete", micropost, method: :delete,
+                                     data: { confirm: "You sure?" },
+                                     title: micropost.content %>
+  <% end %>
+</li>

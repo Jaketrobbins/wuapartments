@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140128022445) do
+ActiveRecord::Schema.define(version: 20140130211219) do
+
+  create_table "microposts", force: true do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.integer  "houseprice"
+    t.string   "ptitle"
+    t.integer  "psqft"
+    t.integer  "pbed"
+    t.integer  "pbath"
+    t.integer  "pzip"
+    t.string   "paddress"
+    t.string   "pcity"
+    t.string   "pstate"
+    t.boolean  "pfurnish"
+    t.boolean  "pcats"
+    t.boolean  "pdogs"
+    t.boolean  "psmoke"
+    t.boolean  "plaundry"
+    t.boolean  "pparking"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
 
   create_table "users", force: true do |t|
     t.string   "name"

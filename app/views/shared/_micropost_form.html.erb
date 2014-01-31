@@ -1,0 +1,33 @@
+<%= form_for(@micropost) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  
+    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.text_field :houseprice, placeholder: "price" %>
+    <%= f.text_field :ptitle, placeholder: "title" %>
+    <%= f.text_field :psqft, placeholder: "sqft" %>
+    <%= f.text_field :pbed, placeholder: "bed" %>
+    <%= f.text_field :pbath, placeholder: "bath" %>
+    <%= f.text_field :pzip, placeholder: "zip" %>
+    <%= f.text_field :paddress, placeholder: "address" %>
+    <%= f.text_field :pcity, placeholder: "city" %>
+    <%= f.text_field :pstate, placeholder: "state" %>
+    <%= f.label :pcats %>
+    <%= f.check_box  :pcats%>
+    <%= f.label :pdogs %>
+    <%= f.check_box  :pdogs%>
+    <%= f.label :psmoke %>
+    <%= f.check_box  :psmoke%>
+    <%= f.label :plaundry %>
+    <%= f.check_box  :plaundry %>
+    <%= f.label :pparking %>
+    <%= f.check_box  :pparking%>
+    <%= f.label :pfurnish %>
+    <%= f.check_box  :pfurnish%>
+
+
+
+
+
+
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>
