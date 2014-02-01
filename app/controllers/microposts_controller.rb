@@ -2,20 +2,38 @@ class MicropostsController < ApplicationController
   before_action :signed_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
+   def new
+     if signed_in?
+      @micropost = Micropost.new 
+    end
+   end
+
+   def show
+    @micropost = Micropost.find(params[:id]) 
+   end 
+
+   def index
+    @microposts = Micropost.paginate(page: params[:page])
+   end
+
    def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to listing_url
+      redirect_to @micropost
     else
       @feed_items = []
-      render 'static_pages/listing'
+      render 'new'
     end
   end
+  
   def destroy
-    @micropost.destroy
-    redirect_to listing_url
+    Micropost.find(params[:id]).destroy
+    flash[:success] = "Post deleted."
+    redirect_to root_url
   end
+
+
 
 
   private

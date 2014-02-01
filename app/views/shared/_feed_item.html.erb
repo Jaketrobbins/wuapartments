@@ -3,22 +3,16 @@
     <span class="user">
       <%= link_to feed_item.user.name, feed_item.user %>
     </span>
-    <span class="content"><%= feed_item.content %></span>
+    <span class="ptitle"> 
+    	<%= link_to feed_item.ptitle, micropost_path(feed_item)  %>
     <span class"houseprice"><%= feed_item.houseprice %> </span>
     <span class"psqft"><%= feed_item.psqft %> </span>
-	<span class"ptitle"><%= feed_item.ptitle %> </span>
     <span class"pbed"><%= feed_item.pbed %> </span>
     <span class"pbath"><%= feed_item.pbath %> </span>
     <span class"pzip"><%= feed_item.pzip %> </span>
   	<span class"paddress"><%= feed_item.paddress %> </span>
     <span class"pcity"><%= feed_item.pcity %> </span>
-	<span class"pstate"><%= feed_item.pstate %> </span>
-	<span class"pfurnish"><%= feed_item.pfurnish %> </span>
-	<span class"pcats"><%= feed_item.pcats %> </span>
-	<span class"pdogs"><%= feed_item.pdogs %> </span>
-	<span class"psmoke"><%= feed_item.psmoke %> </span>
-	<span class"plaundry"><%= feed_item.plaundry %> </span>
-	<span class"pparking"><%= feed_item.pparking %> </span>    
+	<span class"pstate"><%= feed_item.pstate %> </span>   
     <span class="timestamp">
       Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
     </span>

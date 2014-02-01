@@ -1,21 +1,67 @@
-<li>
-  <span class="content"><%= micropost.content %></span>
-  <span class"houseprice"><%= micropost.houseprice %> </span>
-  <span class"psqft"><%= micropost.psqft %> </span>
-  <span class"ptitle"><%= micropost.ptitle %> </span>
-  <span class"pbed"><%= micropost.pbed %> </span>
-  <span class"pbath"><%= micropost.pbath %> </span>
-  <span class"pzip"><%= micropost.pzip %> </span>
-  <span class"paddress"><%= micropost.paddress %> </span>
-  <span class"pcity"><%= micropost.pcity %> </span>
-  <span class"pstate"><%= micropost.pstate %> </span>
-  <span class"pfurnish"><%= micropost.pfurnish %> </span>
-  <span class"pcats"><%= micropost.pcats %> </span>
-  <span class"pdogs"><%= micropost.pdogs %> </span>
-  <span class"psmoke"><%= micropost.psmoke %> </span>
-  <span class"plaundry"><%= micropost.plaundry %> </span>
-  <span class"pparking"><%= micropost.pparking %> </span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-  </span>
-</li>
+<div id="portfolio_tem">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3><span class"ptitle"><%= micropost.ptitle %></span></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-7 left_box">
+                    <div class="big">
+                        <%= image_tag "img/folio_item1.png", class: "img-responseive" %>
+                        <%= image_tag "img/folio_item1.png", class: "img-responseive" %>
+                        <%= image_tag "img/folio_item1.png", class: "img-responseive" %>
+                        <%= image_tag "img/folio_item1.png", class: "img-responseive" %>
+                    </div>
+                    <div class="thumbs">
+                        <div class="thumb">
+                          <%= image_tag "img/folio_thumb1.png"%>
+                            <a href="#" class="mask">
+                                <div class="more">+</div>
+                            </a>
+                        </div>
+                        <div class="thumb">
+                            <%= image_tag "img/folio_thumb1.png"%>
+                            <a href="#" class="mask">
+                                <div class="more">+</div>
+                            </a>
+                        </div>
+                        <div class="thumb">
+                            <%= image_tag "img/folio_thumb1.png"%>
+                            <a href="#" class="mask">
+                                <div class="more">+</div>
+                            </a>
+                        </div>
+                        <div class="thumb last">
+                            <%= image_tag "img/folio_thumb1.png"%>
+                            <a href="#" class="mask">
+                                <div class="more">+</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+<div class="col-sm-5 right_box">
+		<li>
+			  <span class"psqft"><div><%= micropost.psqft %> sqft</div></span> 
+			  <span class"pbed"><div><%= micropost.pbed %> bed</div></span>
+			  <span class"pbath"><div><%= micropost.pbath %> bath</div></span>
+			  <span class"paddress"><div><%= micropost.paddress %></div></span>
+			  <div><span class"pcity"><%= micropost.pcity %> </span>,<span class"pstate"><%= micropost.pstate %> </span>,<span class"pzip"><%= micropost.pzip %></span></div>
+			  <span class="content"><%= micropost.content %></span>
+			  <span class"pfurnish"><%= micropost.pfurnish %> </span>
+			  <span class"pcats"><%= micropost.pcats %> </span>
+			  <span class"pdogs"><%= micropost.pdogs %> </span>
+			  <span class"psmoke"><%= micropost.psmoke %> </span>
+			  <span class"plaundry"><%= micropost.plaundry %> </span>
+			  <span class"pparking"><%= micropost.pparking %> </span>
+			  <span class="timestamp">
+			    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+			  </span>
+		</li>
+		<iframe width="400" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/?ie=UTF8&amp;ll=64.089157,-21.816616&amp;spn=0.045157,0.15398&amp;t=m&amp;z=13&amp;output=embed"></iframe>
+		</div>
+     </div>
+    </div> 
+ </div>
